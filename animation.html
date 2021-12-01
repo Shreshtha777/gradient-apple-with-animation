@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.box{
+     background-size:  400%;
+            animation: gradient 15s ease infinite;
+            height: 50vh;
+            width: 25%;
+            border-radius: 29% 36% 50% 50%;
+            position: relative;
+            margin: auto;
+            margin-top: 8vh;
+           
+            background: linear-gradient(-45deg,#0d0dec ,#06f106,#f009b6 ,#f1ee0b);
+            animation: gradient 15s ease infinite;
+           
+
+
+        }
+        @keyframes gradient{
+            0%{
+                background-position: 0% 50%;
+            }
+            50%{
+                background-position: 100% 50%;
+            }
+            100%{
+                background-position: 0% 50%;
+            }
+        }
+
+        .circle {
+    position: absolute;
+    width: 100px;
+    height: 127px;
+    background: white;
+    border-radius: 56%;
+    margin-left: 798px;
+   
+    top: 215px;
+}
+
+    
+    .triangle-up {
+    position: relative;
+    width: 3px;
+    height: -53px;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 76px solid greenyellow;
+    border-bottom-left-radius: 97px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 107px;
+    border-bottom-left-radius: 97px;
+    left: 656px;
+    top: 45px;
+    z-index: 99;
+    transform: rotate(104deg);
+}
+
+.vapour{
+position: relative;
+display: flex;
+z-index: 1;
+padding: 0 20px;
+justify-content: center;
+            
+          }
+          .vapour span{
+             position: relative;
+             bottom: 50px;
+             display: block;
+             margin: -71px 2px -50px;
+             min-width: 80px;
+             height: 120px;
+             background: yellow;
+             border-radius: 50%;
+             animation: animate 5s linear infinite;
+             opacity: 0;
+             filter: blur(37px);
+            animation-delay: calc(var(--v)* 0.5s);
+
+          }
+          @keyframes animate{
+            0%{
+                transform: translateY(0) scaleX(1);
+            }
+            15%{
+                opacity: 1;
+            }
+            50%{
+                transform: translateY(-150px) scaleX(5);
+            } 
+            95%{
+                opacity: 0;
+            } 
+            100%{
+                transform: translateY(-300px) scaleX(10);
+            }
+        } 
+          
+
+    </style>
+</head>
+<body>
+    <div class="triangle-up"></div>
+    <div class="circle">
+      
+    </div>
+
+    <div class="box"></div>
+    <div  class="vapour" >
+        <span style="--v:1;"></span>
+        <span style="--v:2;"></span>
+        <span style="--v:8;"></span>
+        <span style="--v:10;"></span>
+        <span style="--v:4;"></span>
+        <span style="--v:12;"></span> 
+        <span style="--v:13;"></span>
+        <span style="--v:5;"></span>
+        <span style="--v:6;"></span>
+        <span style="--v:10;"></span>
+        <span style="--v:7;"></span>
+        <span style="--v:8;"></span>
+        <span style="--v:9;"></span>
+        <span style="--v:10;"></span>
+        <span style="--v:0;"></span>
+        <span style="--v:12;"></span> 
+        <span style="--v:13;"></span>
+
+
+
+
+    
+    </div>
+</body>
+</html>
